@@ -1,0 +1,20 @@
+<div class="row" [class.hide]="isCheck">
+    <div class="col-md-6 m-auto">
+        <form action="">
+            <input type="text" name="name"    (keyup)="sendData($event)"  class="form-control">
+            <input type="text" name="email"   (keyup)="sendData($event)"  class="form-control">
+            <input type="text" name="company" (keyup)="sendData($event)"  class="form-control">
+            <input type="text" name="salary"  (keyup)="sendData($event)"  class="form-control">
+            <button   type="button" (click)="display()" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div class="row" [class.hide]="!isCheck" >
+    <div class="col-md-6 p-4">
+        <p>{{records.name}}</p>
+        <p>{{records.email}}</p>
+        <p>{{records.company}}</p>
+        <p>{{records.salary}}</p>
+    </div>
+</div>

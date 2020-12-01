@@ -1,0 +1,5 @@
+<form  (ngSubmit)="submit()">
+    <input type="text" name="title" [(ngModel)]="title" id="">
+    <button type="submit">submit</button> 
+</form>
+<app-todo-item [todo]="todo" *ngFor="let todo of todos" (todoDel)="todoss($event)" ></app-todo-item>
